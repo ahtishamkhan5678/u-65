@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+  </head>
+
+  <style>
+     *{
+    margin:0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+#navbar{
+    box-shadow: (0,0,0,0.15) 1.95px,1.96px,2.06px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: bisque;
+}
+#navbar >div:first-child{
+    margin-left: 3%;
+}
+
+#navbar >div:nth-child(2){
+    margin-right: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+span{
+    color: brown;
+    font-size: 15px;
+}
+#navbar a{
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+#products{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 1% 1% 5% 5%;
+    margin: auto;
+    margin-top: 4%;
+
+}
+#products h1{
+   font-size: 20px;
+    margin: auto;
+    margin-bottom: 4%;
+    
+}
+#products input, #products select {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 1% 1% 5% 5%;
+    margin: auto;
+    margin-top: 4%;
+    
+} 
+.po{
+  text-align: center;
+}
+#all_products{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  /* padding-left: 20px;
+  padding-right: 20px; */
+
+}
+
+  </style>
+
+  <body>
+    <div id="navbar">
+      <a href=" "  id ="show_products"><h3>Show Products</h3></a>
+      <a href=" ">
+        <h3>Shoes - <span>0</span></h3>
+      </a>
+      <a href=" ">
+        <h3>Slipper  - <span>0</span></h3>
+      </a>
+      <a href=" ">
+        <h3>T-shirst - <span>0</span></h3>
+      </a>
+      <!--Create Add More Product button here, give id as "add_more_product". avoid making spelling mistakes in HTML id's-->
+    </div>
+    <div id="all_products">
+      <!--append all products data here in grid format-->
+       <table>
+         <thead>
+
+             <tr>
+               <th>Types</th>
+               <th>Description</th>
+               <th>Price</th>
+               <th>Image URL</th>
+              <th>Remove_product</th> 
+             </tr>
+            </thead>
+          <tbody id ="tbody"></tbody>
+       </table>
+      <!-- The Remove Product button will have id as "remove_product" -->
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/inventory.js"></script>
